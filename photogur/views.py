@@ -7,6 +7,7 @@ def root(request):
 
 def pictures(request):
     context = {
+        'title': 'Photogur',
         'pictures': Picture.objects.all(),
     }
     response = render(request, 'pictures.html', context) 
@@ -14,6 +15,9 @@ def pictures(request):
 
 def picture_show(request, id):
     picture = Picture.objects.get(pk=id)
-    context = {'picture': picture}
+    context = {
+        'title': 'Selected Picture',
+        'picture': picture
+    }
     response = render(request, 'picture.html', context)
     return HttpResponse(response)
