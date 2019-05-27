@@ -10,12 +10,10 @@
     <h1>Photogur</h1>
     <ul>
         {% for picture in pictures %}
+        <a href="{% url 'picture_show' id=picture.id %}"><img src='{{ picture.url }}'></a>
+        {{ picture.title }} by {{ picture.artist }}
         <li>
-            <img src='{{ picture.url }}'>
-            {{ picture.title }} by {{ picture.artist }}
-            <ul>
-                <p>Comments: {{ picture.comments.count }}</p>
-            </ul>
+            <p>Comments: {{ picture.comments.count }}</p>
         </li>
         {% endfor %}
     </ul>
