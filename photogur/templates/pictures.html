@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Photogur</h1>
     <ul>
         {% for picture in pictures %}
         <a href="{% url 'picture_show' id=picture.id %}"><img src='{{ picture.url }}'></a>
