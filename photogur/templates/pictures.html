@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-    <ul>
+    <ul class="photo_grid">
         {% for picture in pictures %}
-        <a href="{% url 'picture_show' id=picture.id %}"><img src='{{ picture.url }}'></a>
-        {{ picture.title }} by {{ picture.artist }}
-        <li>
-            <p>Comments: {{ picture.comments.count }}</p>
+        <li class="photo">
+            <a href="{% url 'picture_show' id=picture.id %}"><img src='{{ picture.url }}'></a><br>
+            {{ picture.title }} by {{ picture.artist }}
+            <!-- <p>Comments: {{ picture.comments.count }}</p> -->
         </li>
         {% endfor %}
     </ul>

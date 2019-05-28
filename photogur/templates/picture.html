@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>{{ picture.title }}</h2>
-    <h3>By {{ picture.artist }}</h3>
-    <img src="{{ picture.url }}" alt="{{ picture.title }}" />
-    <h5>Comments:</h5>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/picture.css' %}">
+    <img class="hero-picture" src="{{ picture.url }}" alt="{{ picture.title }}" />
+    <h2 class="picture_title">{{ picture.title }}</h2>
+    <h3 class="picture_artist">By {{ picture.artist }}</h3>
+    <h5></h5>
     <ul>
+        <span>Comments</span>
         {% for comment in picture.comments.all %}
-        <li>{{ comment.message }}</li>
+        <li>{{ comment.name }}: {{ comment.message }}</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'pictures' %}">Back to all pictures</a>
+    <a class="back" href="{% url 'pictures' %}">Return to all pictures</a>
 {% endblock %}

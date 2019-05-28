@@ -1,0 +1,35 @@
+.main {
+    margin-bottom: 40px;
+}
+.hero-picture {
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px 50px;
+}
+.picture_title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3em;
+    text-decoration: bold;
+    color: rgb(8, 209, 142);
+    padding: 2px 50px;
+}
+.picture_artist {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    padding: 2px 50px 20px;
+}
+ul {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 50px;
+    line-height: 1.5em;
+}
+span {
+    text-decoration: underline;
+}
+.back {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 5px 50px;
+    text-decoration-color: grey;
+    text-align: right;
+}
